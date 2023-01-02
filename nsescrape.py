@@ -36,6 +36,7 @@ def home():
     s = soup.find('p', class_='result__BigRate-sc-1bsijpp-1')
     content = str(s) #tr(s.find_all('i')[0])
     data["usd2inr"] = content.split('Aod">')[1].split('<span')[0].strip()
+    #json response
     return jsonify(data)
 
 if __name__ == '__main__':
